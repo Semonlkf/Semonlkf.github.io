@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>八皇后问题</title>
+      <link href="/2022/08/23/%E5%85%AB%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/"/>
+      <url>/2022/08/23/%E5%85%AB%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h1 id="八皇后问题介绍"><a href="#八皇后问题介绍" class="headerlink" title="八皇后问题介绍"></a>八皇后问题介绍</h1><p>八皇后问题，是一个古老而著名的问题，是回溯算法的典型案例。该问题是国际西洋棋手马克思.贝瑟尔与1848年提出: 在8x8格的国际象棋上摆放八个皇后，使其不能相互攻击，即: 任意两个皇后都不能处于同一行，同一列或同一斜线上，问有多少种摆法？ </p><p>！<a href="https://bkimg.cdn.bcebos.com/pic/377adab44aed2e738bd4ef4c1c49b68b87d6277f4c30?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U5Mg==,g_7,xp_5,yp_5/format,f_auto">图片</a><br>使用递归法：</p><pre><code>import renum = 0import numpy as npimport matplotlib.pyplot as pltdef queen_try(i, row_pos, col, left_diag, right_diag):if i == 8:    global num    num = num + 1    print(row_pos)    x = np.arange(0,8,1)    y = row_pos    plt.grid(b=True,axis=&#39;both&#39;,color=&#39;r&#39;,linestyle=&#39;:&#39;,linewidth=2)    plt.scatter(x,y,c=&#39;k&#39;,marker=&#39;D&#39;)    plt.show()    returnfor j in range(0,8):    if col[j] and left_diag[i + j] and right_diag[i - j + 7]:        row_pos[i] = j        col[j] = 0        left_diag[i + j] = 0        right_diag[i - j + 7] = 0        queen_try(i + 1, row_pos, col, left_diag, right_diag)        col[j] = 1        left_diag[i + j] = 1        right_diag[i - j + 7] = 1def main():    row_pos = [0] * 8    col = [1] * 8    left_diag = [1] * 15    right_diag = [1] * 15    queen_try(0, row_pos, col, left_diag, right_diag)main()print(num)</code></pre><p>现在对代码进行分析：</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>正则表达式</title>
       <link href="/2022/08/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
       <url>/2022/08/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>

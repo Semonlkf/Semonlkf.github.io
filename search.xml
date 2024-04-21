@@ -193,4 +193,81 @@
         <category>Deep Learning</category>
       </categories>
   </entry>
+  <entry>
+    <title>map (c++ STL)</title>
+    <url>/2024/04/21/map%20(c++%20STL)/</url>
+    <content><![CDATA[<p><code>std::map</code> 是 C++ 标准模板库（STL）中一个非常实用的容器，它存储键值对（key-value pairs）并基于键（key）自动排序。在内部，<code>std::map</code> 通常使用红黑树实现，这为大多数操作（如插入、删除、查找）提供了对数时间复杂度的性能。</p>
+<h3 id="基本特性"><a href="#基本特性" class="headerlink" title="基本特性"></a>基本特性</h3><ul>
+<li><strong>唯一的键</strong>：每个键在 <code>map</code> 中必须是唯一的。</li>
+<li><strong>自动排序</strong>：元素根据键自动排序，排序规则默认是 <code>std::less&lt;Key&gt;</code>，这意味着键会以升序排列。</li>
+<li><strong>直接访问</strong>：提供通过键直接访问对应值的能力，如果键不存在，会自动创建一个与该键关联的值。</li>
+</ul>
+<h3 id="主要成员函数"><a href="#主要成员函数" class="headerlink" title="主要成员函数"></a>主要成员函数</h3><ol>
+<li><strong>插入和删除</strong><ul>
+<li><code>insert(std::pair&lt;const Key, Value&gt;(key, value))</code>：向 <code>map</code> 中插入键值对。如果键已存在，则插入不会发生。</li>
+<li><code>erase(const Key&amp; key)</code>：从 <code>map</code> 中删除键及其关联的值。</li>
+<li><code>clear()</code>：移除所有键值对，清空 <code>map</code>。</li>
+</ul>
+</li>
+<li><strong>查找和访问</strong><ul>
+<li><code>find(const Key&amp; key)</code>：返回一个迭代器到给定键，如果键不存在，则返回 <code>end()</code>。</li>
+<li><code>count(const Key&amp; key)</code>：返回特定键的元素数量（对于 <code>map</code> 而言，结果为 0 或 1）。</li>
+<li><code>operator[]</code>：通过键访问值。如果键不存在，将会创建一个新的元素并插入到 <code>map</code> 中。</li>
+</ul>
+</li>
+<li><strong>大小和容量</strong><ul>
+<li><code>size()</code>：返回 <code>map</code> 中键值对的数量。</li>
+<li><code>empty()</code>：如果 <code>map</code> 为空，则返回 <code>true</code>。</li>
+</ul>
+</li>
+<li><strong>迭代器</strong><ul>
+<li><code>begin()</code> 和 <code>end()</code>：提供遍历 <code>map</code> 的方法。由于 <code>map</code> 是有序的，迭代器会按照键的排序顺序访问每个键值对。</li>
+</ul>
+</li>
+</ol>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><p>下面是使用 <code>std::map</code> 的简单示例，演示了如何创建 <code>map</code>，添加和删除元素，以及如何通过迭代器遍历 <code>map</code>：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    std::map&lt;std::string, <span class="type">int</span>&gt; ageMap;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 插入键值对</span></span><br><span class="line">    ageMap.<span class="built_in">insert</span>(std::<span class="built_in">make_pair</span>(<span class="string">"Alice"</span>, <span class="number">30</span>));</span><br><span class="line">    ageMap[<span class="string">"Bob"</span>] = <span class="number">25</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 访问元素</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Alice's age: "</span> &lt;&lt; ageMap[<span class="string">"Alice"</span>] &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历 map</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; pair : ageMap) {</span><br><span class="line">        std::cout &lt;&lt; pair.first &lt;&lt; <span class="string">" is "</span> &lt;&lt; pair.second &lt;&lt; <span class="string">" years old."</span> &lt;&lt; std::endl;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 删除元素</span></span><br><span class="line">    ageMap.<span class="built_in">erase</span>(<span class="string">"Bob"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检查元素是否存在</span></span><br><span class="line">    <span class="keyword">if</span> (ageMap.<span class="built_in">find</span>(<span class="string">"Bob"</span>) == ageMap.<span class="built_in">end</span>()) {</span><br><span class="line">        std::cout &lt;&lt; <span class="string">"Bob is not in the map."</span> &lt;&lt; std::endl;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>set(c++ STL)</title>
+    <url>/2024/04/21/set(c++%20STL)/</url>
+    <content><![CDATA[<p><strong>一段描述性的话语</strong><code>   std::set</code> 是 C++ 标准模板库（STL）的一部分，它提供了一个存储唯一元素的集合，这些元素按照特定的排序准则进行排序。<code>set</code> 在内部通常实现为红黑树，这意味着它可以在对数时间内完成大多数关键操作，如插入、删除和搜索。</p>
+<h3 id="基本特性"><a href="#基本特性" class="headerlink" title="基本特性"></a>基本特性</h3><ul>
+<li><strong>唯一性</strong>：<code>set</code> 中的元素必须是唯一的。</li>
+<li><strong>有序性</strong>：元素根据其值自动排序，默认使用 <code>std::less&lt;T&gt;</code>，这意味着元素将以升序方式存储。</li>
+<li><strong>自动排序</strong>：当元素被插入到 <code>set</code> 中时，它会自动被插入到正确的位置以保持集合的有序性。</li>
+</ul>
+<h3 id="主要成员函数"><a href="#主要成员函数" class="headerlink" title="主要成员函数"></a>主要成员函数</h3><ol>
+<li><strong>插入和删除</strong><ul>
+<li><code>insert(const T&amp; value)</code>：向集合中插入值，如果值已存在，则操作不会改变集合。</li>
+<li><code>erase(const T&amp; value)</code>：从集合中删除值。</li>
+<li><code>clear()</code>：移除所有元素，清空集合。</li>
+</ul>
+</li>
+<li><strong>查找和访问</strong><ul>
+<li><code>find(const T&amp; value)</code>：返回一个指向找到的值的迭代器，如果未找到则返回 <code>end()</code>。</li>
+<li><code>count(const T&amp; value)</code>：返回特定值的元素数量（对于 <code>set</code> 而言，结果为 0 或 1）。</li>
+<li><code>lower_bound(const T&amp; value)</code> 和 <code>upper_bound(const T&amp; value)</code>：返回一个迭代器，分别指向不小于（大于等于）和大于特定值的第一个元素。</li>
+</ul>
+</li>
+<li><strong>大小和容量</strong><ul>
+<li><code>size()</code>：返回 <code>set</code> 中元素的数量。</li>
+<li><code>empty()</code>：如果 <code>set</code> 为空，则返回 <code>true</code>。</li>
+</ul>
+</li>
+<li><strong>迭代器</strong><ul>
+<li><code>begin()</code> 和 <code>end()</code>：提供了遍历集合的方式。由于 <code>set</code> 是有序的，迭代器将按照元素的排序顺序遍历元素。</li>
+</ul>
+</li>
+</ol>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><p>下面是一个使用 <code>std::set</code> 的简单例子，展示如何创建集合，插入和删除元素，以及如何遍历集合：</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    std::set&lt;<span class="type">int</span>&gt; numbers;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 插入元素</span></span><br><span class="line">    numbers.<span class="built_in">insert</span>(<span class="number">10</span>);</span><br><span class="line">    numbers.<span class="built_in">insert</span>(<span class="number">20</span>);</span><br><span class="line">    numbers.<span class="built_in">insert</span>(<span class="number">30</span>);</span><br><span class="line">    numbers.<span class="built_in">insert</span>(<span class="number">20</span>); <span class="comment">// 不会有任何效果，因为 20 已存在</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检查元素是否存在</span></span><br><span class="line">    <span class="keyword">if</span> (numbers.<span class="built_in">find</span>(<span class="number">20</span>) != numbers.<span class="built_in">end</span>()) {</span><br><span class="line">        std::cout &lt;&lt; <span class="string">"20 is in the set."</span> &lt;&lt; std::endl;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历 set</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> number : numbers) {</span><br><span class="line">        std::cout &lt;&lt; number &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 删除元素</span></span><br><span class="line">    numbers.<span class="built_in">erase</span>(<span class="number">20</span>);</span><br><span class="line">    <span class="keyword">if</span> (numbers.<span class="built_in">find</span>(<span class="number">20</span>) == numbers.<span class="built_in">end</span>()) {</span><br><span class="line">        std::cout &lt;&lt; <span class="string">"20 has been removed."</span> &lt;&lt; std::endl;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 再次遍历 set</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> number : numbers) {</span><br><span class="line">        std::cout &lt;&lt; number &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+  </entry>
 </search>

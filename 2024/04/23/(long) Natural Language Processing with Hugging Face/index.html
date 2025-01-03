@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Liu Kaifeng">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/04/23/(long) natural language processing with hugging face/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="What is NLP ?NLP is a field of linguistics and machine learning focused on understanding everything related to human language.The aim of NLP tasks is not only to understand single words individually,b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Natural Language Processing with Hugging Face">
+<meta property="og:url" content="http://example.com/2024/04/23/(long)%20Natural%20Language%20Processing%20with%20Hugging%20Face/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="What is NLP ?NLP is a field of linguistics and machine learning focused on understanding everything related to human language.The aim of NLP tasks is not only to understand single words individually,b">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-04-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-01-03T13:46:16.340Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="English">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Natural Language Processing with Hugging Face | Kaifeng&#39;s Blog
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+        
+<script src="/js/build/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Kaifeng's Blog","subtitle":{"text":["持续训练"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":"525911606@qq.com"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories/","icon":"fa-solid fa-folder"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about/","Github":"https://github.com/EvanNotFound/hexo-theme-redefine","Blog":"https://ohevan.com","Friends":"/friends"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Kaifeng&#39;s Blog
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="/images/kffavicon.ico" class="w-full h-full rounded-sm">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Kaifeng&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories/"
+                                        >
+                                    <i class="fa-solid fa-folder fa-fw"></i>
+                                    CATEGORIES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about/">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/EvanNotFound/hexo-theme-redefine">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://ohevan.com">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/friends">
+                                                    FRIENDS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories/"
+                        >
+                            <span>
+                                CATEGORIES
+                            </span>
+                            
+                                <i class="fa-solid fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about/">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/EvanNotFound/hexo-theme-redefine">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://ohevan.com">BLOG</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/friends">FRIENDS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Natural Language Processing with Hugging Face</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/photo.png">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Liu Kaifeng</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-04-23</span>
+        <span class="mobile">2024-04-23</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-01-03 21:46:16</span>
+            <span class="mobile">2025-01-03 21:46:16</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/NLP/">NLP</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/English/">English</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h1 id="What-is-NLP"><a href="#What-is-NLP" class="headerlink" title="What is NLP ?"></a>What is NLP ?</h1><p>NLP is a field of linguistics and machine learning focused on understanding everything related to human language.The aim of NLP tasks is not only to understand single words individually,but to be able to understand the context of those words.</p>
+<h1 id="What-is-Transformers-what-can-they-do"><a href="#What-is-Transformers-what-can-they-do" class="headerlink" title="What is Transformers,what can they do?"></a>What is Transformers,what can they do?</h1><h2 id="pipeline-function"><a href="#pipeline-function" class="headerlink" title="pipeline()function"></a><code>pipeline()</code>function</h2><blockquote>
+<p>This is some abstract of pipeline() function to help me review this function,it is all from huggingface <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/learn/nlp-course/chapter1/4?fw=pt">website<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+</blockquote>
+<p>The most basic object in the Transformers library is the <code>pipeline()</code>.It connects a model with its necessary preprocessing and postprocessing steps,allowing us to directly input any text and get an intelligible answer:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from transformers import pipeline</span><br><span class="line"></span><br><span class="line">classifier = pipeline("sentiment-analysis")</span><br><span class="line">classifier("I've been waiting for a HuggingFace course my whole life.")</span><br></pre></td></tr></table></figure></div>
+<p>By default, this pipeline selects a particular pretrained model that has been fine-tuned for sentiment analysis in English. The model is downloaded and cached when you create the <code>classifier</code> object. If you rerun the command, the cached model will be used instead and there is no need to download the model again.<br>There are three main steps involved when you pass some text to a pipeliune:</p>
+<ol>
+<li>The text is preprocessed into a format the model can understand.</li>
+<li>The preprocessed inputs are passed to the model.</li>
+<li>The predictions of the model are post-processed, so you can make sense of them.</li>
+</ol>
+<p>The piplines are a great and easy way to use models for inference.These pipelines are objects that abstract most of the complex code from the The pipelines are a great and easy way to use models for inference. These pipelines are objects that abstract most of the complex code from the library, offering a simple API dedicated to several tasks, including Named Entity Recognition, Masked Language Modeling, Sentiment Analysis, Feature Extraction and Question Answering.</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pipe = pipeline("text-classification")</span><br><span class="line">pipe(["This restaurant is awesome", "This restaurant is awful"])</span><br></pre></td></tr></table></figure></div>
+<p>To iterate over full datasets it is recommended to use a <code>dataset</code> directly. This means you don’t need to allocate the whole dataset at once, nor do you need to do batching yourself. This should work just as fast as custom loops on GPU. If it doesn’t don’t hesitate to create an issue.</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">To iterate over full datasets it is recommended to use a `dataset` directly. This means you don’t need to allocate the whole dataset at once, nor do you need to do batching yourself. This should work just as fast as custom loops on GPU. If it doesn’t don’t hesitate to create an issue.</span><br></pre></td></tr></table></figure></div>
+<p>For ease of use, a generator is also possible:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">from transformers import pipeline</span><br><span class="line"></span><br><span class="line">pipe = pipeline("text-classification")</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def data():</span><br><span class="line">    while True:</span><br><span class="line">        # This could come from a dataset, a database, a queue or HTTP request</span><br><span class="line">        # in a server</span><br><span class="line">        # Caveat: because this is iterative, you cannot use `num_workers &gt; 1` variable</span><br><span class="line">        # to use multiple threads to preprocess data. You can still have 1 thread that</span><br><span class="line">        # does the preprocessing while the main runs the big inference</span><br><span class="line">        yield "This is a test"</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for out in pipe(data()):</span><br><span class="line">    print(out)</span><br><span class="line">    # {"text": "NUMBER TEN FRESH NELLY IS WAITING ON YOU GOOD NIGHT HUSBAND"}</span><br><span class="line">    # {"text": ....}</span><br><span class="line">    # ....</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="transformers-pipeline"><a href="#transformers-pipeline" class="headerlink" title="transformers.pipeline"></a>transformers.pipeline</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">( </span><br><span class="line">task: str = None</span><br><span class="line">model: typing.Union[str, ForwardRef('PreTrainedModel'),ForwardRef('TFPreTrainedModel'), NoneType] = None</span><br><span class="line">config: typing.Union[str,transformers.configuration_utils.PretrainedConfig, NoneType] = None</span><br><span class="line">tokenizer: typing.Union[str,transformers.tokenization_utils.PreTrainedTokenizer, ForwardRef('PreTrainedTokenizerFast'), NoneType] = None</span><br><span class="line">feature_extractor: typing.Union[str,ForwardRef('SequenceFeatureExtractor'), NoneType] = None</span><br><span class="line">image_processor: typing.Union[str,transformers.image_processing_utils.BaseImageProcessor, NoneType] = None</span><br><span class="line">processor: typing.Union[str, transformers.processing_utils.ProcessorMixin, NoneType] = None</span><br><span class="line">framework: typing.Optional[str] = None</span><br><span class="line">revision: typing.Optional[str] = None</span><br><span class="line">use_fast: bool = True</span><br><span class="line">token: typing.Union[str, bool, NoneType] = None</span><br><span class="line">device: typing.Union[int, str, ForwardRef('torch.device'), NoneType] = None</span><br><span class="line">device_map = None</span><br><span class="line">torch_dtype = None</span><br><span class="line">trust_remote_code: typing.Optional[bool] = None</span><br><span class="line">model_kwargs: typing.Dict[str, typing.Any] = None</span><br><span class="line">pipeline_class typing.Optional[typing.Any] = None**kwargs ) → [Pipeline][https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.Pipeline]</span><br></pre></td></tr></table></figure></div>
+<h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h3><ul>
+<li>task(str)-The task defining which pipeline will be returned.Currently accepted tasks are:<ul>
+<li>“audio-classification”`: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.AudioClassificationPipeline">AudioClassificationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+</ul>
+<ul>
+<li><code>"automatic-speech-recognition"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.AutomaticSpeechRecognitionPipeline">AutomaticSpeechRecognitionPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"depth-estimation"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.DepthEstimationPipeline">DepthEstimationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"document-question-answering"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.DocumentQuestionAnsweringPipeline">DocumentQuestionAnsweringPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"feature-extraction"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.FeatureExtractionPipeline">FeatureExtractionPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"fill-mask"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.FillMaskPipeline">FillMaskPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>:.</li>
+<li><code>"image-classification"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ImageClassificationPipeline">ImageClassificationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"image-feature-extraction"</code>: will return an <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ImageFeatureExtractionPipeline">ImageFeatureExtractionPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"image-segmentation"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ImageSegmentationPipeline">ImageSegmentationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"image-text-to-text"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ImageTextToTextPipeline">ImageTextToTextPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"image-to-image"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ImageToImagePipeline">ImageToImagePipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"image-to-text"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ImageToTextPipeline">ImageToTextPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"mask-generation"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.MaskGenerationPipeline">MaskGenerationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"object-detection"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ObjectDetectionPipeline">ObjectDetectionPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"question-answering"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.QuestionAnsweringPipeline">QuestionAnsweringPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"summarization"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.SummarizationPipeline">SummarizationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"table-question-answering"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.TableQuestionAnsweringPipeline">TableQuestionAnsweringPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"text2text-generation"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.Text2TextGenerationPipeline">Text2TextGenerationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"text-classification"</code> (alias <code>"sentiment-analysis"</code> available): will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.TextClassificationPipeline">TextClassificationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"text-generation"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.TextGenerationPipeline">TextGenerationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>:.</li>
+<li><code>"text-to-audio"</code> (alias <code>"text-to-speech"</code> available): will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.TextToAudioPipeline">TextToAudioPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>:.</li>
+<li><code>"token-classification"</code> (alias <code>"ner"</code> available): will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.TokenClassificationPipeline">TokenClassificationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"translation"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.TranslationPipeline">TranslationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"translation_xx_to_yy"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.TranslationPipeline">TranslationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"video-classification"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.VideoClassificationPipeline">VideoClassificationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"visual-question-answering"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.VisualQuestionAnsweringPipeline">VisualQuestionAnsweringPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"zero-shot-classification"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ZeroShotClassificationPipeline">ZeroShotClassificationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"zero-shot-image-classification"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ZeroShotImageClassificationPipeline">ZeroShotImageClassificationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"zero-shot-audio-classification"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ZeroShotAudioClassificationPipeline">ZeroShotAudioClassificationPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+<li><code>"zero-shot-object-detection"</code>: will return a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/pipelines#transformers.ZeroShotObjectDetectionPipeline">ZeroShotObjectDetectionPipeline<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</li>
+</ul>
+</li>
+<li><strong>model</strong>(<code>str</code> or <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/model#transformers.PreTrainedModel">PreTrainedModel<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> or <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/model#transformers.TFPreTrainedModel">TFPreTrainedModel<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <em>optional</em>) — The model that will be used by the pipeline to make predictions. This can be a model identifier or an actual instance of a pretrained model inheriting from <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/model#transformers.PreTrainedModel">PreTrainedModel<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> (for PyTorch) or <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/model#transformers.TFPreTrainedModel">TFPreTrainedModel<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> (for TensorFlow).</li>
+<li><strong>config</strong>:The configuration that will be used by the pipeline to instantiate the model.</li>
+<li>tokenizer - Tje tokenizer that will be used by the pipeline to encode data for the model.</li>
+<li>feature_extractor(<code>str</code> )</li>
+<li>If not provided, the default tokenizer for the given <code>model</code> will be loaded (if it is a string). If <code>model</code> is not specified or not a string, then the default tokenizer for <code>config</code> is loaded (if it is a string). However, if <code>config</code> is also not given or not a string, then the default tokenizer for the given <code>task</code> will be loaded.</li>
+</ul>
+<ul>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.feature_extractor"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>feature_extractor</strong> (<code>str</code> or <code>PreTrainedFeatureExtractor</code>, <em>optional</em>) — The feature extractor that will be used by the pipeline to encode data for the model. This can be a model identifier or an actual pretrained feature extractor inheriting from <code>PreTrainedFeatureExtractor</code>.<br>  Feature extractors are used for non-NLP models, such as Speech or Vision models as well as multi-modal models. Multi-modal models will also require a tokenizer to be passed.<br>  If not provided, the default feature extractor for the given <code>model</code> will be loaded (if it is a string). If <code>model</code> is not specified or not a string, then the default feature extractor for <code>config</code> is loaded (if it is a string). However, if <code>config</code> is also not given or not a string, then the default feature extractor for the given <code>task</code> will be loaded.</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.image_processor"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>image_processor</strong> (<code>str</code> or <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/image_processor#transformers.BaseImageProcessor">BaseImageProcessor<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <em>optional</em>) — The image processor that will be used by the pipeline to preprocess images for the model. This can be a model identifier or an actual image processor inheriting from <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/image_processor#transformers.BaseImageProcessor">BaseImageProcessor<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.<br>  Image processors are used for Vision models and multi-modal models that require image inputs. Multi-modal models will also require a tokenizer to be passed.<br>  If not provided, the default image processor for the given <code>model</code> will be loaded (if it is a string). If <code>model</code> is not specified or not a string, then the default image processor for <code>config</code> is loaded (if it is a string).</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.processor"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>processor</strong> (<code>str</code> or <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/processors#transformers.ProcessorMixin">ProcessorMixin<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <em>optional</em>) — The processor that will be used by the pipeline to preprocess data for the model. This can be a model identifier or an actual processor inheriting from <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/processors#transformers.ProcessorMixin">ProcessorMixin<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.<br>  Processors are used for multi-modal models that require multi-modal inputs, for example, a model that requires both text and image inputs.<br>  If not provided, the default processor for the given <code>model</code> will be loaded (if it is a string). If <code>model</code> is not specified or not a string, then the default processor for <code>config</code> is loaded (if it is a string).</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.framework"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>framework</strong> (<code>str</code>, <em>optional</em>) — The framework to use, either <code>"pt"</code> for PyTorch or <code>"tf"</code> for TensorFlow. The specified framework must be installed.<br>  If no framework is specified, will default to the one currently installed. If no framework is specified and both frameworks are installed, will default to the framework of the <code>model</code>, or to PyTorch if no model is provided.</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.revision"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>revision</strong> (<code>str</code>, <em>optional</em>, defaults to <code>"main"</code>) — When passing a task name or a string model identifier: The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a git-based system for storing models and other artifacts on huggingface.co, so <code>revision</code> can be any identifier allowed by git.</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.use_fast"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>use_fast</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) — Whether or not to use a Fast tokenizer if possible (a <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/v4.47.1/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast">PreTrainedTokenizerFast<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>).</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.use_auth_token"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>use_auth_token</strong> (<code>str</code> or <em>bool</em>, <em>optional</em>) — The token to use as HTTP bearer authorization for remote files. If <code>True</code>, will use the token generated when running <code>huggingface-cli login</code> (stored in <code>~/.huggingface</code>).</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.device"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>device</strong> (<code>int</code> or <code>str</code> or <code>torch.device</code>) — Defines the device (<em>e.g.</em>, <code>"cpu"</code>, <code>"cuda:1"</code>, <code>"mps"</code>, or a GPU ordinal rank like <code>1</code>) on which this pipeline will be allocated.</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.device_map"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>device_map</strong> (<code>str</code> or <code>Dict[str, Union[int, str, torch.device]</code>, <em>optional</em>) — Sent directly as <code>model_kwargs</code> (just a simpler shortcut). When <code>accelerate</code> library is present, set <code>device_map="auto"</code> to compute the most optimized <code>device_map</code> automatically (see <a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/accelerate/main/en/package_reference/big_modeling#accelerate.cpu_offload">here<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> for more information).</li>
+<li><strong>torch_dtype</strong> (<code>str</code> or <code>torch.dtype</code>, <em>optional</em>) — Sent directly as <code>model_kwargs</code> (just a simpler shortcut) to use the available precision for this model (<code>torch.float16</code>, <code>torch.bfloat16</code>, … or <code>"auto"</code>).</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.trust_remote_code"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>trust_remote_code</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) — Whether or not to allow for custom code defined on the Hub in their own modeling, configuration, tokenization or even pipeline files. This option should only be set to <code>True</code> for repositories you trust and in which you have read the code, as it will execute code present on the Hub on your local machine.</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.model_kwargs"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>model_kwargs</strong> (<code>Dict[str, Any]</code>, <em>optional</em>) — Additional dictionary of keyword arguments passed along to the model’s <code>from_pretrained(..., **model_kwargs)</code> function.</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://huggingface.co/docs/transformers/main_classes/pipelines#transformers.pipeline.kwargs"><i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><strong>kwargs</strong> (<code>Dict[str, Any]</code>, <em>optional</em>) — Additional keyword arguments passed along to the specific pipeline init (see the documentation for the corresponding pipeline class for possible values).</li>
+</ul>
+<h1 id="How-do-Transformers-work"><a href="#How-do-Transformers-work" class="headerlink" title="How do Transformers work ?"></a>How do Transformers work ?</h1>
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Natural Language Processing with Hugging Face</li>
+        <li><strong>Author:</strong> Liu Kaifeng</li>
+        <li><strong>Created at
+                :</strong> 2024-04-23 00:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2025-01-03 21:46:16
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2024/04/23/(long) Natural Language Processing with Hugging Face/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/English/">#English</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2024/04/23/Word_Vector/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Word Vector</span>
+						<span class="post-nav-item">Prev posts</span>
+					</span>
+				</a>
+			</div>
+			
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">Natural Language Processing with Hugging Face</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-NLP"><span class="nav-text">What is NLP ?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-Transformers-what-can-they-do"><span class="nav-text">What is Transformers,what can they do?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pipeline-function"><span class="nav-text">pipeline()function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#transformers-pipeline"><span class="nav-text">transformers.pipeline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameters"><span class="nav-text">Parameters</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-do-Transformers-work"><span class="nav-text">How do Transformers work ?</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Liu Kaifeng</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        2 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/runtime.js"></script>
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
+</body>
+
+</html>
